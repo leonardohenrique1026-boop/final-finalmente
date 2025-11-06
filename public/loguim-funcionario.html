@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Barbearia</title>
+    <link rel="stylesheet" href="login-funcionario.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Gragas barbearia</h1>
+            <p class="subtitle">Login de entrada</p>
+
+            <!-- Formulário de Login -->
+            <form class="form active" id="loginForm">
+                <div class="form-group">
+                    <label for="nomeLogin">Seu Nome:</label>
+                    <input type="text" id="nomeLogin" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpfLogin">Seu CPF:</label>
+                    <input type="password" id="cpfLogin" name="cpf" placeholder="Digite seu CPF (11 números)" 
+                           pattern="\d{11}" maxlength="11" required>
+                    <small class="hint">Apenas números, sem pontos ou traços</small>
+                </div>
+
+                <button type="submit" class="btn">Entrar</button>
+
+                <div class="message error-message" id="loginError">
+                    CPF não encontrado ou não cadastrado!
+                </div>
+
+                <div class="message success-message" id="loginSuccess">
+                    Login realizado! Redirecionando...
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="login-funcionario.js"></script>
+</body>
+</html>
